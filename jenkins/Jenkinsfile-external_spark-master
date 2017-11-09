@@ -3,7 +3,7 @@
 
 properties(
         [
-                pipelineTriggers([cron('H 23 * * *')]),
+                pipelineTriggers([cron('H 22 * * *')]),
                 buildDiscarder(logRotator(numToKeepStr: '10'))
         ]
 )
@@ -25,9 +25,9 @@ node('dX-hadoop') {
         runIntegTests = "true"
         runPySparklingIntegTests = "true"
         sparklingTestEnv = "yarn"
-        buildAgainstH2OBranch = "true"
+        buildAgainstH2OBranch = "false"
         h2oBranch = "master"
-        buildAgainstSparkBranch = "false"
+        buildAgainstSparkBranch = "true"
         sparkBranch = "master"
         hadoopVersion = "2.6"
         backendMode = "external"

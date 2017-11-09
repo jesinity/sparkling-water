@@ -27,6 +27,8 @@ node('dX-hadoop') {
         sparklingTestEnv = "yarn"
         buildAgainstH2OBranch = "true"
         h2oBranch = "master"
+        buildAgainstSparkBranch = "false"
+        sparkBranch = "master"
         hadoopVersion = "2.6"
         backendMode = "internal"
     }
